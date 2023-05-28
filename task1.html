@@ -7,34 +7,56 @@
         <title>Task 1</title>
     </head>
     <body>
-      <h1>Form</h1>
-      <form>
-        <section>
-            <label for="fname">Full Name</label>
-            <input type="text" id="fname" name="fname" placeholder="Victoriia Mindiuk" required>
-        </section>
-
-        <section>
+        <h1>Form</h1>
+        
+        <form>
+            <section>
+                <label for="fname">Full Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Victoriia Mindiuk" required>
+            </section>
+            <br/>
+       
+            <fieldset style="width: 14%; margin: 0">
+                <legend>Sex</legend>
             
-                <legend>Sex:</legend>
+                <input type="radio" id="male" name="sex" value="male" checked>
+                <label for="male">Male</label><br/>
+             
+                <input type="radio" id="female" name="sex" value="female">
+                <label for="female">Female</label><br/>
             
-                <div>
-                  <input type="radio" id="huey" name="drone" value="huey"
-                         checked>
-                  <label for="huey">Huey</label>
-                </div>
-            
-                <div>
-                  <input type="radio" id="dewey" name="drone" value="dewey">
-                  <label for="dewey">Dewey</label>
-                </div>
-            
-                <div>
-                  <input type="radio" id="louie" name="drone" value="louie">
-                  <label for="louie">Louie</label>
-                </div>
-            
-        </section>
-      </form>  
+                <input type="radio" id="other" name="sex" value="other">
+                <label for="other">Other</label><br/>
+            </fieldset>
+        
+            <br/>
+            <section>
+                <label for="birthdate">Date of Birth</label>
+                <input type="date"  required>
+            </section>
+            <br/>
+            <section>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" pattern="^[a-z0-9._-]+@ukma\.edu\.ua$" placeholder="xxxxx@ukma.edu.ua" required>
+            </section>
+            <br/>
+            <section>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" pattern="^\+380\d{9}$" placeholder="+380 XX XXX XX XX" required>
+            </section>
+            <br/>
+            <section>
+                <label for="color">Color</label>
+                <input type="color" id="color" name="color">
+            </section>
+            <br/>
+            <section>
+                <label for="comment">Comment</label><br/>
+                <textarea id="comment" name="message" rows="5" cols="30" placeholder="Additional information"></textarea>
+            </section>
+            <br/>
+            <button type="submit">Add Teacher</button>
+            <button type="reset">Reset</button>
+        </form> 
     </body>
 </html>
